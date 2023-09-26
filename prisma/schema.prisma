@@ -18,19 +18,20 @@ model Librarian {
   email    String @unique
 }
 
+model Client {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  password String
+  email    String @unique
+}
+
 model Book {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   author    String
   published DateTime
   isbn      String   @unique
+  ddc       String   @unique
   pages     Int
   quantity  Int
-}
-
-model Reader {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  name     String
-  password String
-  email    String @unique
 }

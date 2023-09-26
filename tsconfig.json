@@ -35,7 +35,10 @@
         "./src/config/*"
       ],
       "@routes/*": [
-        "./src/routes/*"
+        "src/interfaces/routes/*"
+      ],
+      "@entities/*": [
+        "src/domain/entities/*"
       ]
     }
   },
