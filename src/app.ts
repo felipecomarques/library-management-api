@@ -35,8 +35,9 @@ async function createBook (): Promise<Book> {
       data: {
         title: 'Crime and Punishment',
         author: 'Fyodor Dostoevsky',
-        published: '1866-01-01T00:00:00.000Z',
+        published: new Date('1866-01-01T00:00:00.000Z'),
         isbn: '8573266465',
+        ddc: 800,
         pages: 592,
         quantity: 5
       }

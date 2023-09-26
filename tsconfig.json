@@ -39,6 +39,9 @@
       ],
       "@entities/*": [
         "src/domain/entities/*"
+      ],
+      "@repository/*": [
+        "src/domain/repository/*"
       ]
     }
   },
