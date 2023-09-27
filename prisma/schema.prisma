@@ -26,12 +26,13 @@ model Client {
 }
 
 model Book {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  title     String
-  author    String
-  published DateTime
-  isbn      String   @unique
-  ddc       Int      @unique
-  pages     Int
-  quantity  Int
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  title               String
+  author              String
+  published           DateTime
+  isbn                String   @unique
+  deweyClassification Int      @unique
+  CutterSanborn       String
+  pages               Int
+  quantity            Int
 }
