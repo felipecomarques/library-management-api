@@ -1,39 +1,20 @@
-import { type BookProps } from '@entities/book/book'
-import { Book } from '@repository/book/bookRepository'
+import { type BookRepository } from '@repository/book/bookRepository'
+import { type BookProps, type Book } from '@entities/book/book'
+import { type useCase } from '@useCases/useCase'
 
-// interface createBookRequest {
-//   title: string
-//   author: string
-//   published: Date
-//   isbn: string
-//   ddc: number
-//   pages: number
-//   quantity: number
-// }
+type request = BookProps
+type response = Book
 
-type createBookRequest = BookProps
+export class CreateBook implements useCase<request, response> {
+  constructor (private readonly repository: BookRepository) {}
 
-type createBookResponse = Book
+  async execute (data: request): Promise<response> {
+    const { title, author, published, isbn, deweyClassification, cutterSanborn, pages, quantity } = data
 
-export class CreateBook {
-  async execute ({
-    title,
-    author,
-    published,
-    isbn,
-    ddc,
-    pages,
-    quantity
-  }: createBookRequest): Promise<createBookResponse> {
-    const book = new Book({
-      title,
-      author,
-      published,
-      isbn,
-      ddc,
-      pages,
-      quantity
-    })
-    return book
+    if (quantity < 0) { throw new Error('Invalid quantity. Cannot have a negative number of books') }
+
+    return await this.repository.create(
+      { title, author, published, isbn, deweyClassification, cutterSanborn, pages, quantity }
+    )
   }
 }

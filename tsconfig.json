@@ -42,7 +42,10 @@
       ],
       "@repository/*": [
         "src/domain/repository/*"
-      ]
+      ],
+      "@useCases/*": [
+        "src/application/useCases/*"
+      ],
     }
   },
   "include": [

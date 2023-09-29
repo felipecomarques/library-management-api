@@ -19,7 +19,8 @@ module.exports = {
         '@views': './src/views',
         '@routes': './src/interfaces/routes',
         '@entities': './src/domain/entities/*',
-        '@repository': '/src/domain/repository/*'
+        '@repository': '/src/domain/repository/*',
+        '@useCases': 'src/application/useCases/*'
       }
     }]
   ],
