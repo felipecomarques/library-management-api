@@ -28,11 +28,17 @@ model Client {
 model Book {
   id                  String   @id @default(auto()) @map("_id") @db.ObjectId
   title               String
-  author              String
-  published           DateTime
+  author              String //tabela estarngeria
+  published           DateTime //(INFO DA EDITORA) local da publição da editora e ano - ESTRANGEIRA
   isbn                String   @unique
   deweyClassification Int      @unique
   CutterSanborn       String
-  pages               Int
+  pages               Int //Não é tãaaao util
   quantity            Int
+  //assunto !!!!!!!!!!!!!
+  //notas (tipo descrição)
 }
+
+// ISBD
+// Toda biblio tem que gerar uma ficha catalográfica
+// Seria ótimo se gerar uma referência catalográfica

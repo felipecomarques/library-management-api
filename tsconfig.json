@@ -45,7 +45,7 @@
       ],
       "@useCases/*": [
         "src/application/useCases/*"
-      ],
+      ]
     }
   },
   "include": [
