@@ -1,6 +1,6 @@
-import { type BookRepository } from '@repository/book/bookRepository'
+import { type BookRepository } from '@entities/book/domain/bookRepository'
 import { CreateBook } from './createBook'
-import { Book } from '@entities/book/book'
+import { Book } from '@entities/book/domain/book'
 
 const mockRepository: BookRepository = {
   create: async (props) => {

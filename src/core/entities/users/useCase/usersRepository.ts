@@ -1,5 +1,5 @@
-import { Entity } from '@entities/entity'
-import { type UserProps } from '@entities/users/user'
+import { Entity } from '@shared/entity'
+import { type UserProps } from '@entities/user/domain/user'
 
 export class User extends Entity<UserProps> {
   constructor (props: UserProps, id?: string) {

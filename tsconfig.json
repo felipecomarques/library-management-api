@@ -38,13 +38,16 @@
         "src/interfaces/routes/*"
       ],
       "@entities/*": [
-        "src/domain/entities/*"
+        "src/core/entities/*"
       ],
       "@repository/*": [
         "src/domain/repository/*"
       ],
       "@useCases/*": [
         "src/application/useCases/*"
+      ],
+      "@shared/*": [
+        "src/core/shared/*"
       ]
     }
   },

@@ -18,9 +18,10 @@ module.exports = {
         '@controllers': './src/controllers',
         '@views': './src/views',
         '@routes': './src/interfaces/routes',
-        '@entities': './src/domain/entities/*',
+        '@entities': './src/core/entities/*',
         '@repository': '/src/domain/repository/*',
-        '@useCases': 'src/application/useCases/*'
+        '@useCases': './src/application/useCases/*',
+        '@shared': './src/core/shared/*'
       }
     }]
   ],

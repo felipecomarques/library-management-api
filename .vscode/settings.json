@@ -5,5 +5,15 @@
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
+    },
+    "material-icon-theme.folders.associations": {
+        "core": "json",
+        "domain": "resource",
+        "entities": "class",
+        "repository": "interface",
+        "application": "app",
+        "useCase": "app",
+        "infrastructure": "tools",
+        "interfaces": "routes"
     }
 }

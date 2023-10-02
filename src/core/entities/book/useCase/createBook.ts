@@ -1,6 +1,6 @@
-import { type BookRepository } from '@repository/book/bookRepository'
-import { type BookProps, type Book } from '@entities/book/book'
-import { type useCase } from '@useCases/useCase'
+import { type BookRepository } from '@entities/book/domain/bookRepository'
+import { type BookProps, type Book } from '@entities/book/domain/book'
+import { type useCase } from '@shared/useCase'
 
 type request = BookProps
 type response = Book
@@ -13,8 +13,10 @@ export class CreateBook implements useCase<request, response> {
 
     if (quantity < 0) { throw new Error('Invalid quantity. Cannot have a negative number of books') }
 
-    return await this.repository.create(
+    const res = await this.repository.create(
       { title, author, published, isbn, deweyClassification, cutterSanborn, pages, quantity }
     )
+
+    return res
   }
 }
