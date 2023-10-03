@@ -1,4 +1,4 @@
-import { type BookRepository } from '@entities/book/domain/bookRepository'
+import { type BookRepository } from '@entities/book/repository/bookRepository'
 import { type BookProps, type Book } from '@entities/book/domain/book'
 import { type useCase } from '@shared/useCase'
 
